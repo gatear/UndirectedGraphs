@@ -1,67 +1,11 @@
 package UndirectedGraph;
 
-/**
- * Created by gatear on 9/12/17.
- */
-/******************************************************************************
- *  Compilation:  javac StreamOut.java
- *  Execution:    java StreamOut
- *  Dependencies: none
- *
- *  Writes data of various types to standard output.
- *
- ******************************************************************************/
 
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 
-/**
- *  This class provides methods for printing strings and numbers to standard output.
- *  <p>
- *  <b>Getting started.</b>
- *  To use this class, you must have {@code StreamOut.class} in your
- *  Java classpath. If you used our autoinstaller, you should be all set.
- *  Otherwise, download
- *  <a href = "http://introcs.cs.princeton.edu/java/stdlib/StdOut.java">StreamOut.java</a>
- *  and put a copy in your working directory.
- *  <p>
- *  Here is an example program that uses {@code StreamOut}:
- *  <pre>
- *   public class TestStdOut {
- *       public static void main(String[] args) {
- *           int a = 17;
- *           int b = 23;
- *           int sum = a + b;
- *           StreamOut.println("Hello, World");
- *           StreamOut.printf("%d + %d = %d\n", a, b, sum);
- *       }
- *   }
- *  </pre>
- *  <p>
- *  <b>Differences with System.out.</b>
- *  The behavior of {@code StreamOut} is similar to that of {@link System#out},
- *  but there are a few subtle differences:
- *  <ul>
- *  <li> {@code StreamOut} coerces the character-set encoding to UTF-8,
- *       which is a standard character encoding for Unicode.
- *  <li> {@code StreamOut} coerces the locale to {@link Locale#US},
- *       for consistency with {@link StreamIn}, {@link Double#parseDouble(String)},
- *       and floating-point literals.
- *  <li> {@code StreamOut} <em>flushes</em> standard output after each call to
- *       {@code print()} so that text will appear immediately in the terminal.
- *  </ul>
- *  <p>
- *  <b>Reference.</b>
- *  For additional documentation,
- *  see <a href="http://introcs.cs.princeton.edu/15inout">Section 1.5</a> of
- *  <em>Computer Science: An Interdisciplinary Approach</em>
- *  by Robert Sedgewick and Kevin Wayne.
- *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
- */
 public final class StreamOut {
 
     // force Unicode UTF-8 encoding; otherwise it's system dependent
@@ -168,6 +112,7 @@ public final class StreamOut {
      *
      * @param x the short to print
      */
+
     public static void println(short x) {
         out.println(x);
     }

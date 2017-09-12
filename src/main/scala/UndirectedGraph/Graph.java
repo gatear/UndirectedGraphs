@@ -2,29 +2,6 @@ package UndirectedGraph;
 
 import java.util.NoSuchElementException;
 
-/**
- *  The {@code UndirectedGraph.Graph} class represents an undirected graph of vertices
- *  named 0 through <em>V</em> – 1.
- *  It supports the following two primary operations: add an edge to the graph,
- *  iterate over all of the vertices adjacent to a vertex. It also provides
- *  methods for returning the number of vertices <em>V</em> and the number
- *  of edges <em>E</em>. Parallel edges and self-loops are permitted.
- *  By convention, a self-loop <em>v</em>-<em>v</em> appears in the
- *  adjacency list of <em>v</em> twice and contributes two to the degree
- *  of <em>v</em>.
- *  <p>
- *  This implementation uses an adjacency-lists representation, which 
- *  is a vertex-indexed array of {@link Bag} objects.
- *  All operations take constant time (in the worst case) except
- *  iterating over the vertices adjacent to a given vertex, which takes
- *  time proportional to the number of such vertices.
- *  <p>
- *  For additional documentation, see <a href="http://algs4.cs.princeton.edu/41graph">Section 4.1</a>
- *  of <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
- *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
- */
 public class Graph {
     private static final String NEWLINE = System.getProperty("line.separator");
 
@@ -33,6 +10,7 @@ public class Graph {
     private Bag<Integer>[] adj;
 
     /**
+     *
      * Initializes an empty graph with {@code V} vertices and 0 edges.
      * param V the number of vertices
      *
@@ -186,18 +164,6 @@ public class Graph {
             s.append(NEWLINE);
         }
         return s.toString();
-    }
-
-
-    /**
-     * Unit tests the {@code UndirectedGraph.Graph} data type.
-     *
-     * @param args the command-line arguments
-     */
-    public static void main(String[] args) {
-        In in = new In(args[0]);
-        Graph G = new Graph(in);
-        StreamOut.println(G);
     }
 
 }

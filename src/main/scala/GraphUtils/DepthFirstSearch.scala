@@ -14,6 +14,7 @@ class DepthFirstSearch( graph:Graph ) {
 
   def validateVertex(vertex:Int):Unit ={
 
+
     var tempVertex= _marked.length
 
     if( vertex < 0 || vertex >= tempVertex ) throw new IllegalArgumentException("vertex " + vertex + " is not between 0 and " + (tempVertex - 1))
